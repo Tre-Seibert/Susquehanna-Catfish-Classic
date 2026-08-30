@@ -53,10 +53,11 @@ tailwind.config = {
         <span class="font-condensed text-lg sm:text-xl tracking-wide">Susquehanna Catfish Classic</span>
       </a>
 
-      <div class="hidden md:flex items-center gap-7 font-condensed text-base tracking-wide">
+      <div class="hidden md:flex items-center gap-5 lg:gap-7 font-condensed text-base tracking-wide">
         <a href="index.html" class="hover:text-ochre transition-colors">Home</a>
         <a href="rules.html" class="hover:text-ochre transition-colors">About &amp; Rules</a>
         <a href="contact.html" class="hover:text-ochre transition-colors">Contact</a>
+        <a href="#sponsor" class="hover:text-ochre transition-colors">Sponsor</a>
         <a href="#register" class="btn btn-primary px-4 py-1.5 text-sm">Register</a>
       </div>
 
@@ -72,6 +73,7 @@ tailwind.config = {
         <a href="index.html" class="py-2 hover:text-ochre">Home</a>
         <a href="rules.html" class="py-2 hover:text-ochre">About &amp; Rules</a>
         <a href="contact.html" class="py-2 hover:text-ochre">Contact</a>
+        <a href="#sponsor" class="py-2 hover:text-ochre">Sponsor</a>
         <a href="#register" class="btn btn-primary px-4 py-2 mt-2 text-center">Register</a>
       </div>
     </div>
@@ -84,7 +86,7 @@ tailwind.config = {
 <section class="hero hero--photo halftone relative text-oat overflow-hidden">
   <div class="relative max-w-5xl mx-auto px-4 sm:px-6 py-20 sm:py-28 text-center">
 
-    <img src="assets/catfish-illustration.png" alt="" class="mx-auto w-64 sm:w-80 mb-8" width="320" height="139">
+    <img src="assets/catfish-hooked.png" alt="" class="mx-auto h-44 sm:h-64 w-auto mb-8" width="320" height="240">
 
     <p class="label text-ochre mb-4">Lake Clarke Marina · Susquehanna River, PA</p>
 
@@ -260,7 +262,8 @@ tailwind.config = {
         <h3 class="font-condensed text-2xl mb-1">Tournament Tee</h3>
         <p class="text-sm opacity-75 mb-4 flex-1">
           Heather oatmeal. Badge on the left chest, full mark on the back with the year.
-          Three-color soft-hand print.
+          Three-color soft-hand print. Sponsor logos print across the back —
+          <a href="#sponsor" class="underline hover:text-rust">get on the shirt by July 1</a>.
         </p>
         <div class="flex items-center justify-between gap-4">
           <span class="font-condensed text-2xl">$25</span>
@@ -288,6 +291,79 @@ tailwind.config = {
     <p class="text-center text-sm opacity-65 mt-8">
       Store opens closer to the tournament. Hoodies and stickers to follow.
     </p>
+  </div>
+</section>
+
+<!-- ============================ SPONSOR ============================ -->
+<section id="sponsor" class="halftone relative bg-slate text-oat py-16 sm:py-24" aria-labelledby="sponsor-heading">
+  <div class="relative max-w-2xl mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-10">
+      <p class="label text-ochre mb-3">Official Tee</p>
+      <h2 id="sponsor-heading" class="font-display text-3xl sm:text-5xl mb-4">Sponsor the Shirt</h2>
+      <p class="opacity-90 max-w-lg mx-auto">
+        $250 puts your logo on the official 2027 tournament tee — the one anglers
+        actually wear on the water. Deadline July 1, 2027. Eight spots.
+      </p>
+    </div>
+
+    <form id="sponsor-form" class="card p-6 sm:p-8 text-ink space-y-5" novalidate>
+
+      <div>
+        <label for="sponsorBusiness" class="label block mb-1.5">Business / Sponsor Name <span class="text-rust">*</span></label>
+        <input type="text" id="sponsorBusiness" name="sponsorBusiness" class="field" required placeholder="Wrightsville Bait &amp; Tackle">
+      </div>
+
+      <div>
+        <label for="sponsorContact" class="label block mb-1.5">Contact Name <span class="text-rust">*</span></label>
+        <input type="text" id="sponsorContact" name="sponsorContact" class="field" required placeholder="Full name">
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div>
+          <label for="sponsorEmail" class="label block mb-1.5">Email <span class="text-rust">*</span></label>
+          <input type="email" id="sponsorEmail" name="sponsorEmail" class="field" required placeholder="you@example.com">
+        </div>
+        <div>
+          <label for="sponsorPhone" class="label block mb-1.5">Phone <span class="text-rust">*</span></label>
+          <input type="tel" id="sponsorPhone" name="sponsorPhone" class="field" required placeholder="(717) 555-0134">
+        </div>
+      </div>
+
+      <div>
+        <label for="sponsorWebsite" class="label block mb-1.5">Website <span class="opacity-60 font-normal normal-case tracking-normal">(optional)</span></label>
+        <input type="url" id="sponsorWebsite" name="sponsorWebsite" class="field" placeholder="https://">
+      </div>
+
+      <div>
+        <label for="sponsorNotes" class="label block mb-1.5">Logo / Notes <span class="opacity-60 font-normal normal-case tracking-normal">(optional)</span></label>
+        <textarea id="sponsorNotes" name="sponsorNotes" rows="3" class="field" placeholder="We'll follow up for a one-color or three-color logo file. Vector (.ai, .eps, .svg) preferred."></textarea>
+      </div>
+
+      <div class="border-2 border-dashed border-walnut/50 bg-walnut/5 p-4 text-sm">
+        <p class="font-semibold mb-1">$250 · Deadline July 1, 2027</p>
+        <p class="opacity-80">
+          Payment isn't live yet. Submit to claim a spot and we'll send payment
+          instructions plus artwork specs. Logo must be in before the deadline or
+          it misses the print run. No exceptions — the printer doesn't wait.
+        </p>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-full py-3.5 text-lg">Claim a Spot</button>
+
+      <p class="text-xs text-center opacity-60">
+        Submitting reserves your logo on the tee. Confirmed once payment clears.
+      </p>
+    </form>
+
+    <div id="sponsor-success" class="card p-8 text-ink text-center hidden">
+      <p class="font-display text-2xl mb-3 text-rust">You're on the shirt.</p>
+      <p id="sponsor-summary" class="font-condensed text-lg mb-3"></p>
+      <p class="opacity-80">
+        We'll email payment instructions and where to send your logo.
+        Artwork due by July 1, 2027.
+      </p>
+    </div>
   </div>
 </section>
 
@@ -330,6 +406,7 @@ tailwind.config = {
       <nav class="flex gap-5">
         <a href="rules.html" class="hover:text-ochre">Rules</a>
         <a href="contact.html" class="hover:text-ochre">Contact</a>
+        <a href="#sponsor" class="hover:text-ochre">Sponsor</a>
         <a href="#register" class="hover:text-ochre">Register</a>
       </nav>
     </div>

@@ -35,6 +35,26 @@ if (regForm) {
   });
 }
 
+// Sponsor form (placeholder — no backend wired up yet)
+const sponsorForm = document.getElementById('sponsor-form');
+if (sponsorForm) {
+  sponsorForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!sponsorForm.checkValidity()) {
+      sponsorForm.reportValidity();
+      return;
+    }
+    const data = Object.fromEntries(new FormData(sponsorForm).entries());
+    const successBox = document.getElementById('sponsor-success');
+    const summary = document.getElementById('sponsor-summary');
+    if (summary) {
+      summary.textContent = `${data.sponsorBusiness} — $250 tee sponsor`;
+    }
+    sponsorForm.classList.add('hidden');
+    if (successBox) successBox.classList.remove('hidden');
+  });
+}
+
 // Merch "Add to Cart" placeholder (store not wired up yet)
 document.querySelectorAll('[data-merch-cta]').forEach(btn => {
   btn.addEventListener('click', () => {

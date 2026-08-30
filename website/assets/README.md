@@ -5,8 +5,8 @@ Source illustrations are in `../../logos/`. White backgrounds have been knocked 
 | File | Use |
 |---|---|
 | `icon-mark.png` | Header nav, footer |
-| `catfish-illustration.png` | Homepage hero |
-| `catfish-hooked.png` | Merch / poster (fighting pose) |
+| `catfish-illustration.png` | Header/footer mark, hat card |
+| `catfish-hooked.png` | Homepage hero, tee card |
 | `badge-frame.png` | Empty badge — type not set yet |
 | `merch-tshirt.png` | Tee card (illustration, not a garment mockup) |
 | `merch-hat.png` | Hat card (illustration, not a garment mockup) |
