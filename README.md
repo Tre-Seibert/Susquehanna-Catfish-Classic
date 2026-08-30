@@ -1,6 +1,6 @@
 # Susquehanna Catfish Classic
 
-Branding kit and website for an annual catfish tournament on the lower Susquehanna River, hosted by **Long Level Marina** in Wrightsville, PA.
+Branding kit and website for an annual catfish tournament on the lower Susquehanna River, hosted by **Lake Clarke Marina** in Wrightsville, PA.
 
 > **Where Giants Run the River**
 > August 27–28, 2027 · $125/boat · 4 anglers max · Weigh-in 4:00 PM Saturday
@@ -84,9 +84,7 @@ Open `website/index.html` in a browser. No build step. See `website/README.md` f
 Not a name collision, but Long Level isn't open territory. Worth a conversation with the client about differentiation — and possibly about coordinating dates so the two events don't cannibalize the same local field.
 
 **Verified facts** (not assumed):
-- Long Level Marina — 1809 Long Level Rd, Wrightsville, PA 17368 · (717) 252-1589
-- Lake Clarke Marina — 1552 Long Level Rd, Wrightsville, PA 17368
-- The two are on the same road, roughly ¼ mile apart
+- Lake Clarke Marina — 1552 Long Level Rd, Wrightsville, PA 17368 · (717) 252-2881
 - Last Fri/Sat of August: **2027 = Aug 27–28**, 2028 = Aug 25–26, 2029 = Aug 24–25
 
 ---

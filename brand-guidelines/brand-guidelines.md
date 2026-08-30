@@ -1,6 +1,6 @@
 # Susquehanna Catfish Classic — Brand Guidelines
 
-*Version 2.0 · Vintage / Heritage River-Town direction · Prepared for Long Level Marina*
+*Version 2.0 · Vintage / Heritage River-Town direction · Prepared for Lake Clarke Marina*
 
 ---
 
@@ -21,7 +21,7 @@
 > ## Susquehanna Catfish Classic
 > **"Where Giants Run the River"**
 
-**Why:** it front-loads the two words anglers actually search — the river and the species — and "Classic" signals an established annual event rather than a one-off. Abbreviates cleanly to **SCC**. Leaves "Long Level" free to carry the *host* identity (marina, launch) without crowding the tournament name.
+**Why:** it front-loads the two words anglers actually search — the river and the species — and "Classic" signals an established annual event rather than a one-off. Abbreviates cleanly to **SCC**. Leaves the host marina (Lake Clarke) free to carry launch and weigh-in without crowding the tournament name.
 
 **Alternate taglines:**
 - "Where Giants Run the River"
