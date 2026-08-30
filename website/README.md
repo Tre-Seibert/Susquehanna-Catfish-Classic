@@ -24,7 +24,7 @@ Then visit <http://localhost:8000>.
 website/
 ├── index.html      Home — hero, details, registration, merch
 ├── rules.html      About & tournament rules
-├── contact.html    Locations & maps for both marinas
+├── contact.html    Locations & map for Lake Clarke Marina
 ├── css/styles.css  Heritage theme: palette, paper texture, components
 ├── js/main.js      Mobile nav, form handling, footer year
 └── assets/         Logo + imagery (see "Assets still needed")
@@ -32,18 +32,15 @@ website/
 
 ## Assets
 
-The profile catfish is live in the header, hero, and footer. The hooked fish is in the merch cards as illustration (not a garment mockup).
+The profile catfish is live in the header, hero, and footer. The hooked fish is in the merch cards as illustration (not a garment mockup). The golden-hour river photo is the hero background (`hero--photo`).
 
 Still needed:
 
 | File | Where it appears |
 |---|---|
 | `logo-stacked.png` | Full lockup with type (hero currently uses the fish only) |
-| `hero-river.jpg` | Hero background |
 | `og-image.jpg` | Social sharing preview |
 | Real merch mockups | Shirt / hat on garments |
-
-**To turn on the hero photo:** once `assets/hero-river.jpg` exists, add the `hero--photo` class to the hero `<section>` in `index.html`. The dark overlay is already configured so text stays legible.
 
 ## Still to wire up
 

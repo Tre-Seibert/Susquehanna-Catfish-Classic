@@ -96,4 +96,4 @@ Not a name collision, but Long Level isn't open territory. Worth a conversation 
 3. Get rules sections 3–6 signed off by the committee
 4. Connect the registration form (Netlify Forms is the fastest path — see `website/README.md`)
 5. Set up the real `info@` email address
-6. Shoot real photography at the marina to replace the generated hero
+6. Replace the generated hero with a real shot from Lake Clarke when you have one

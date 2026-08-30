@@ -10,8 +10,9 @@ Source illustrations are in `../../logos/`. White backgrounds have been knocked 
 | `badge-frame.png` | Empty badge — type not set yet |
 | `merch-tshirt.png` | Tee card (illustration, not a garment mockup) |
 | `merch-hat.png` | Hat card (illustration, not a garment mockup) |
+| `susquehanna-golden-hour.png` | Hero background on all pages |
 | `favicon.svg` | Browser tab (SCC wordmark, interim) |
 | `favicon.png` | PNG fallback |
 | `apple-touch-icon.png` | iOS home screen |
 
-Still needed: `hero-river.jpg`, `og-image.jpg`, and a real stacked lockup with type.
+Still needed: `og-image.jpg`, and a real stacked lockup with type.
