@@ -1,0 +1,223 @@
+/* ==========================================================================
+   Susquehanna Catfish Classic — heritage stylesheet
+   Palette and type per brand-guidelines/brand-guidelines.md v2.0
+   ========================================================================== */
+
+:root {
+  --slate:  #2E4A52;
+  --rust:   #A8442A;
+  --ochre:  #C68B2C;
+  --moss:   #5A6B4A;
+  --walnut: #4A3728;
+  --oat:    #EDE4D0;
+  --ink:    #211D1A;
+
+  --slate-dark: #22383E;
+  --oat-deep:   #E2D6BC;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Libre Franklin', system-ui, sans-serif;
+  background-color: var(--oat);
+  color: var(--ink);
+}
+
+/* --- Type roles ---------------------------------------------------------- */
+
+.font-display { font-family: 'Alfa Slab One', Georgia, serif; font-weight: 400; }
+.font-condensed { font-family: 'Staatliches', 'Arial Narrow', sans-serif; letter-spacing: 0.04em; }
+.font-script { font-family: 'Yellowtail', cursive; }
+
+.label {
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+}
+
+/* --- Aged paper texture -------------------------------------------------- */
+/* Fine grain overlay. Keeps flat color from reading as flat *digital* color. */
+
+.paper {
+  position: relative;
+}
+.paper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.22'/%3E%3C/svg%3E");
+}
+.paper > * { position: relative; z-index: 1; }
+
+/* Halftone dot field — vintage print artifact, used behind dark sections */
+.halftone::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.14;
+  background-image: radial-gradient(var(--oat) 1px, transparent 1.4px);
+  background-size: 7px 7px;
+}
+
+/* --- Hero ---------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  background-color: var(--slate);
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(198, 139, 44, 0.22), transparent 70%),
+    linear-gradient(180deg, var(--slate) 0%, var(--slate-dark) 100%);
+}
+
+/* Swap in the generated river photo here — see logos/IMAGE-GEN-PROMPTS.md #4.
+   Add class "hero--photo" to the hero and drop the file at assets/hero-river.jpg */
+.hero--photo {
+  background-image:
+    linear-gradient(180deg, rgba(34, 56, 62, 0.82) 0%, rgba(34, 56, 62, 0.94) 100%),
+    url("../assets/hero-river.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* --- Torn/deckled edge between sections ---------------------------------- */
+
+.edge-top {
+  position: relative;
+}
+.edge-top::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 14px;
+  background: inherit;
+  clip-path: polygon(
+    0 100%, 0 40%, 3% 60%, 7% 30%, 11% 55%, 15% 25%, 19% 50%, 24% 35%,
+    28% 62%, 33% 30%, 38% 55%, 43% 28%, 48% 52%, 53% 32%, 58% 58%,
+    63% 30%, 68% 54%, 73% 26%, 78% 50%, 83% 34%, 88% 58%, 93% 30%,
+    97% 52%, 100% 38%, 100% 100%
+  );
+}
+
+/* --- Rules / dividers ---------------------------------------------------- */
+
+.rule-ornament {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--ochre);
+}
+.rule-ornament::before,
+.rule-ornament::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: currentColor;
+  opacity: 0.55;
+}
+
+/* --- Components ---------------------------------------------------------- */
+
+.btn {
+  display: inline-block;
+  font-family: 'Staatliches', sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  transition: transform 0.12s ease, background-color 0.15s ease, color 0.15s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
+
+.btn-primary {
+  background-color: var(--rust);
+  color: var(--oat);
+  border-color: var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+.btn-primary:hover { background-color: #93381F; }
+
+.btn-outline {
+  border-color: var(--oat);
+  color: var(--oat);
+}
+.btn-outline:hover { background-color: var(--oat); color: var(--slate); }
+
+.card {
+  background-color: var(--oat);
+  border: 2px solid var(--ink);
+  box-shadow: 4px 4px 0 rgba(33, 29, 26, 0.18);
+}
+
+/* Logo placeholder — delete once real artwork lands in assets/ */
+.logo-slot {
+  border: 2px dashed currentColor;
+  opacity: 0.75;
+}
+
+/* --- Forms --------------------------------------------------------------- */
+
+.field {
+  width: 100%;
+  background-color: #FFFDF7;
+  border: 2px solid var(--ink);
+  padding: 0.65rem 0.85rem;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+.field::placeholder { color: #8A8177; }
+.field:focus {
+  outline: none;
+  border-color: var(--rust);
+  box-shadow: 0 0 0 3px rgba(168, 68, 42, 0.22);
+}
+
+/* --- Accessibility ------------------------------------------------------- */
+
+a:focus-visible,
+button:focus-visible,
+.field:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--ochre);
+  outline-offset: 2px;
+}
+
+::selection { background: var(--rust); color: var(--oat); }
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  background: var(--ink);
+  color: var(--oat);
+}
+
+/* --- Mobile nav ---------------------------------------------------------- */
+
+#mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.28s ease, opacity 0.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

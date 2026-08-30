@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact &amp; Location — Susquehanna Catfish Classic</title>
+<meta name="description" content="Directions to Long Level Marina (launch) and Lake Clarke Marina (weigh-in) for the Susquehanna Catfish Classic in Wrightsville, PA.">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Staatliches&family=Yellowtail&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: { extend: { colors: {
+    slate:'#2E4A52', rust:'#A8442A', ochre:'#C68B2C', moss:'#5A6B4A',
+    walnut:'#4A3728', oat:'#EDE4D0', ink:'#211D1A',
+  } } },
+};
+</script>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-oat text-ink">
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="sticky top-0 z-50 bg-slate text-oat border-b-2 border-ink">
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/icon-mark.png" alt="" class="h-10 w-auto" width="96" height="42">
+        <span class="font-condensed text-lg sm:text-xl tracking-wide">Susquehanna Catfish Classic</span>
+      </a>
+      <div class="hidden md:flex items-center gap-7 font-condensed text-base tracking-wide">
+        <a href="index.html" class="hover:text-ochre transition-colors">Home</a>
+        <a href="rules.html" class="hover:text-ochre transition-colors">About &amp; Rules</a>
+        <a href="contact.html" class="text-ochre">Contact</a>
+        <a href="index.html#register" class="btn btn-primary px-4 py-1.5 text-sm">Register</a>
+      </div>
+      <button id="menu-btn" class="md:hidden p-2 -mr-2" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden">
+      <div class="flex flex-col gap-1 pb-4 font-condensed text-lg">
+        <a href="index.html" class="py-2 hover:text-ochre">Home</a>
+        <a href="rules.html" class="py-2 hover:text-ochre">About &amp; Rules</a>
+        <a href="contact.html" class="py-2 text-ochre">Contact</a>
+        <a href="index.html#register" class="btn btn-primary px-4 py-2 mt-2 text-center">Register</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ============================ PAGE HERO ============================ -->
+<section class="hero halftone relative text-oat">
+  <div class="relative max-w-3xl mx-auto px-4 sm:px-6 py-16 sm:py-20 text-center">
+    <p class="label text-ochre mb-4">Find Us</p>
+    <h1 class="font-display text-4xl sm:text-6xl mb-5">Contact &amp; Location</h1>
+    <p class="text-lg opacity-90 max-w-xl mx-auto">
+      Launch and weigh-in are both on Long Level Road, about a quarter mile apart.
+      Hard to get lost.
+    </p>
+  </div>
+</section>
+
+<!-- ============================ LOCATIONS ============================ -->
+<section class="paper edge-top bg-oat py-14 sm:py-20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+    <div class="grid lg:grid-cols-2 gap-8 lg:gap-10">
+
+      <!-- Long Level Marina -->
+      <article class="card overflow-hidden flex flex-col">
+        <div class="bg-slate text-oat p-5">
+          <p class="label text-ochre mb-1">Host &amp; Launch</p>
+          <h2 class="font-display text-2xl">Long Level Marina</h2>
+        </div>
+
+        <iframe
+          title="Map of Long Level Marina, 1809 Long Level Rd, Wrightsville PA"
+          src="https://maps.google.com/maps?q=1809+Long+Level+Rd,+Wrightsville,+PA+17368&z=14&output=embed"
+          class="w-full h-64 border-0"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <div class="p-5 flex-1 flex flex-col">
+          <address class="not-italic text-lg leading-relaxed mb-3">
+            1809 Long Level Rd<br>
+            Wrightsville, PA 17368
+          </address>
+          <p class="mb-4">
+            <a href="tel:+17172521589" class="font-condensed text-xl text-rust underline hover:text-ink">(717) 252-1589</a>
+          </p>
+          <p class="text-sm opacity-75 mb-5 flex-1">
+            Boat launch, parking, and check-in. This is where the tournament starts Friday morning.
+          </p>
+          <a href="https://maps.google.com/maps?q=1809+Long+Level+Rd,+Wrightsville,+PA+17368"
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn-primary text-center py-2.5">Get Directions</a>
+        </div>
+      </article>
+
+      <!-- Lake Clarke Marina -->
+      <article class="card overflow-hidden flex flex-col">
+        <div class="bg-walnut text-oat p-5">
+          <p class="label text-ochre mb-1">Weigh-In</p>
+          <h2 class="font-display text-2xl">Lake Clarke Marina</h2>
+        </div>
+
+        <iframe
+          title="Map of Lake Clarke Marina, 1552 Long Level Rd, Wrightsville PA"
+          src="https://maps.google.com/maps?q=1552+Long+Level+Rd,+Wrightsville,+PA+17368&z=14&output=embed"
+          class="w-full h-64 border-0"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <div class="p-5 flex-1 flex flex-col">
+          <address class="not-italic text-lg leading-relaxed mb-3">
+            1552 Long Level Rd<br>
+            Wrightsville, PA 17368
+          </address>
+          <p class="font-condensed text-xl text-rust mb-4">Scales open 4:00 PM Saturday</p>
+          <p class="text-sm opacity-75 mb-5 flex-1">
+            Bring your fish here Saturday afternoon. Scales close at 6:00 PM sharp —
+            late boats don't get weighed.
+          </p>
+          <a href="https://maps.google.com/maps?q=1552+Long+Level+Rd,+Wrightsville,+PA+17368"
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn-primary text-center py-2.5">Get Directions</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ QUESTIONS ============================ -->
+<section class="paper py-14 sm:py-20" style="background-color:#E2D6BC">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+    <p class="label text-moss mb-3">Questions</p>
+    <h2 class="font-display text-3xl sm:text-4xl mb-6">Get in Touch</h2>
+    <p class="text-lg leading-relaxed mb-8 max-w-xl mx-auto">
+      Questions about rules, entry, or the weigh-in? Call Long Level Marina and they'll
+      point you at the right person on the tournament committee.
+    </p>
+
+    <div class="grid sm:grid-cols-2 gap-6 max-w-xl mx-auto text-left">
+      <div class="card p-5">
+        <p class="label text-rust mb-2">Phone</p>
+        <a href="tel:+17172521589" class="font-condensed text-2xl underline hover:text-rust">(717) 252-1589</a>
+        <p class="text-sm opacity-70 mt-1">Long Level Marina</p>
+      </div>
+      <div class="card p-5">
+        <p class="label text-rust mb-2">Email</p>
+        <a href="mailto:info@susquehannacatfishclassic.com" class="text-base font-semibold underline hover:text-rust break-words">info@susquehannacatfishclassic.com</a>
+        <p class="text-sm opacity-70 mt-1">Placeholder — set up before launch</p>
+      </div>
+    </div>
+
+    <a href="index.html#register" class="btn btn-primary px-8 py-3 text-lg mt-10">Register Your Boat</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="halftone relative bg-ink text-oat pt-14 pb-8">
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid sm:grid-cols-3 gap-10 mb-10">
+      <div>
+        <img src="assets/icon-mark.png" alt="" class="h-12 w-auto mb-3" width="96" height="42">
+        <p class="font-display text-xl mb-3">Susquehanna<br>Catfish Classic</p>
+        <p class="font-script text-ochre text-xl">Where Giants Run the River</p>
+      </div>
+      <div>
+        <p class="label text-ochre mb-3">Host — Launch</p>
+        <p class="font-condensed text-lg leading-snug">Long Level Marina</p>
+        <address class="not-italic text-sm opacity-80 mt-1 leading-relaxed">
+          1809 Long Level Rd<br>Wrightsville, PA 17368<br>
+          <a href="tel:+17172521589" class="underline hover:text-ochre">(717) 252-1589</a>
+        </address>
+      </div>
+      <div>
+        <p class="label text-ochre mb-3">Weigh-In</p>
+        <p class="font-condensed text-lg leading-snug">Lake Clarke Marina</p>
+        <address class="not-italic text-sm opacity-80 mt-1 leading-relaxed">
+          1552 Long Level Rd<br>Wrightsville, PA 17368<br>
+          Scales open 4:00 PM Saturday
+        </address>
+      </div>
+    </div>
+    <div class="border-t border-oat/20 pt-6 flex flex-col sm:flex-row justify-between gap-3 text-sm opacity-70">
+      <p>&copy; <span data-year>2027</span> Susquehanna Catfish Classic · Hosted by Long Level Marina</p>
+      <nav class="flex gap-5">
+        <a href="rules.html" class="hover:text-ochre">Rules</a>
+        <a href="contact.html" class="hover:text-ochre">Contact</a>
+        <a href="index.html#register" class="hover:text-ochre">Register</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
