@@ -55,6 +55,90 @@ if (sponsorForm) {
   });
 }
 
+// Countdown to check-in — split-flap style tiles
+(function initCountdown() {
+  const countdownEl = document.getElementById('countdown');
+  if (!countdownEl) return;
+
+  const CHECK_IN = new Date('2027-08-27T17:00:00-04:00');
+  const REG_CLOSE = new Date('2027-08-25T17:00:00-04:00');
+
+  const digits = {
+    days: countdownEl.querySelector('[data-unit="days"]'),
+    hours: countdownEl.querySelector('[data-unit="hours"]'),
+    minutes: countdownEl.querySelector('[data-unit="minutes"]'),
+    seconds: countdownEl.querySelector('[data-unit="seconds"]'),
+  };
+
+  const regNote = document.getElementById('countdown-reg-note');
+  const liveNote = document.getElementById('countdown-live-note');
+  const srLive = document.getElementById('countdown-sr-live');
+
+  const pad = (n) => String(n).padStart(2, '0');
+
+  function setDigit(unit, value) {
+    const el = digits[unit];
+    const next = pad(value);
+    if (el.textContent === next) return;
+    const tile = el.closest('.flip-tile');
+    tile.classList.remove('is-flipping');
+    void tile.offsetWidth; // restart animation
+    tile.classList.add('is-flipping');
+    setTimeout(() => { el.textContent = next; }, 250);
+  }
+
+  function updateRegNote() {
+    if (!regNote) return;
+    const diff = REG_CLOSE - new Date();
+    if (diff <= 0) {
+      regNote.textContent = 'Registration is closed.';
+      return;
+    }
+    const days = Math.ceil(diff / 86400000);
+    regNote.textContent = days <= 1
+      ? 'Registration closes today at 5:00 PM.'
+      : `Registration closes in ${days} days — Wed, Aug 25 at 5:00 PM.`;
+  }
+
+  let timer;
+  let lastAnnouncedMinute = null;
+
+  function tick() {
+    const diff = CHECK_IN - new Date();
+
+    if (diff <= 0) {
+      countdownEl.classList.add('hidden');
+      if (regNote) regNote.classList.add('hidden');
+      if (liveNote) {
+        liveNote.textContent = 'Lines are in — good luck out there.';
+        liveNote.classList.remove('hidden');
+      }
+      clearInterval(timer);
+      return;
+    }
+
+    const totalSeconds = Math.floor(diff / 1000);
+    const days = Math.floor(totalSeconds / 86400);
+    const hours = Math.floor((totalSeconds % 86400) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+
+    setDigit('days', days);
+    setDigit('hours', hours);
+    setDigit('minutes', minutes);
+    setDigit('seconds', seconds);
+    updateRegNote();
+
+    if (srLive && minutes !== lastAnnouncedMinute) {
+      lastAnnouncedMinute = minutes;
+      srLive.textContent = `${days} days, ${hours} hours, ${minutes} minutes until check-in`;
+    }
+  }
+
+  tick();
+  timer = setInterval(tick, 1000);
+})();
+
 // Merch "Add to Cart" placeholder (store not wired up yet)
 document.querySelectorAll('[data-merch-cta]').forEach(btn => {
   btn.addEventListener('click', () => {

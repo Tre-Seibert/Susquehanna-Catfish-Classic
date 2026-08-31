@@ -116,6 +116,38 @@ tailwind.config = {
   </div>
 </section>
 
+<!-- ============================ COUNTDOWN ============================ -->
+<section class="paper edge-top bg-oat-deep py-14 sm:py-20" style="background-color:#E2D6BC" aria-labelledby="countdown-heading">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+    <p class="label text-rust mb-3">Lines In</p>
+    <h2 id="countdown-heading" class="font-display text-3xl sm:text-4xl mb-2">Countdown to Check-In</h2>
+    <p class="font-script text-ochre text-xl sm:text-2xl mb-9">Friday, August 27, 2027 &middot; 5:00 PM</p>
+
+    <div id="countdown" class="countdown-flip flex justify-center gap-2.5 sm:gap-5" role="timer" aria-label="Time remaining until check-in">
+      <div class="flip-tile flex flex-col items-center px-2.5 sm:px-5 py-3 sm:py-4 min-w-[64px] sm:min-w-[90px]">
+        <span class="flip-digit font-condensed text-3xl sm:text-6xl" data-unit="days" aria-hidden="true">00</span>
+        <span class="label text-[0.65rem] sm:text-xs mt-2 opacity-70">Days</span>
+      </div>
+      <div class="flip-tile flex flex-col items-center px-2.5 sm:px-5 py-3 sm:py-4 min-w-[64px] sm:min-w-[90px]">
+        <span class="flip-digit font-condensed text-3xl sm:text-6xl" data-unit="hours" aria-hidden="true">00</span>
+        <span class="label text-[0.65rem] sm:text-xs mt-2 opacity-70">Hours</span>
+      </div>
+      <div class="flip-tile flex flex-col items-center px-2.5 sm:px-5 py-3 sm:py-4 min-w-[64px] sm:min-w-[90px]">
+        <span class="flip-digit font-condensed text-3xl sm:text-6xl" data-unit="minutes" aria-hidden="true">00</span>
+        <span class="label text-[0.65rem] sm:text-xs mt-2 opacity-70">Min</span>
+      </div>
+      <div class="flip-tile flex flex-col items-center px-2.5 sm:px-5 py-3 sm:py-4 min-w-[64px] sm:min-w-[90px]">
+        <span class="flip-digit font-condensed text-3xl sm:text-6xl" data-unit="seconds" aria-hidden="true">00</span>
+        <span class="label text-[0.65rem] sm:text-xs mt-2 opacity-70">Sec</span>
+      </div>
+    </div>
+
+    <p id="countdown-sr-live" class="sr-only" aria-live="polite"></p>
+    <p id="countdown-reg-note" class="text-sm mt-8 opacity-75"></p>
+    <p id="countdown-live-note" class="font-display text-2xl sm:text-3xl text-rust mt-4 hidden"></p>
+  </div>
+</section>
+
 <!-- ============================ KEY DETAILS ============================ -->
 <section class="paper edge-top bg-oat py-14 sm:py-20" aria-labelledby="details-heading">
   <div class="max-w-6xl mx-auto px-4 sm:px-6">

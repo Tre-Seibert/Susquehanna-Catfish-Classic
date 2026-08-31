@@ -171,6 +171,51 @@ body {
   opacity: 0.75;
 }
 
+/* --- Countdown / split-flap board ----------------------------------------
+   Vintage marina reader-board style: flat tiles, hard shadow (matches .card),
+   a seam line down the middle, and a quick flip on digit change. */
+
+.countdown-flip {
+  perspective: 500px;
+}
+
+.flip-tile {
+  position: relative;
+  background-color: var(--oat);
+  border: 2px solid var(--ink);
+  box-shadow: 4px 4px 0 rgba(33, 29, 26, 0.18);
+}
+.flip-tile::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  background: var(--ink);
+  opacity: 0.2;
+  transform: translateY(-1px);
+}
+
+.flip-digit {
+  display: block;
+  color: var(--rust);
+  font-variant-numeric: tabular-nums;
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+
+.flip-tile.is-flipping .flip-digit {
+  animation: flip-digit 0.5s ease-in-out;
+}
+
+@keyframes flip-digit {
+  0%   { transform: rotateX(0deg); }
+  49%  { transform: rotateX(-90deg); }
+  50%  { transform: rotateX(90deg); }
+  100% { transform: rotateX(0deg); }
+}
+
 /* --- Forms --------------------------------------------------------------- */
 
 .field {
