@@ -32,7 +32,7 @@ website/
 
 ## Assets
 
-The profile catfish is live in the header, hero, and footer. The hooked fish is in the merch cards as illustration (not a garment mockup). The golden-hour river photo is the hero background (`hero--photo`).
+The hooked fish is in the homepage hero. The golden-hour river photo is the hero background (`hero--photo`): portrait crop on phones, wide crop from 768px up.
 
 Still needed:
 

@@ -77,13 +77,21 @@ body {
 }
 
 /* Swap in the generated river photo — logos/IMAGE-GEN-PROMPTS.md #4.
-   Add class "hero--photo" to the hero section. */
+   Add class "hero--photo" to the hero section. Mobile uses the portrait crop. */
 .hero--photo {
   background-image:
     linear-gradient(180deg, rgba(34, 56, 62, 0.78) 0%, rgba(33, 29, 26, 0.90) 100%),
-    url("../assets/susquehanna-golden-hour.png");
+    url("../assets/susquehanna-golden-hour-mobile.png");
   background-size: cover;
   background-position: center;
+}
+
+@media (min-width: 768px) {
+  .hero--photo {
+    background-image:
+      linear-gradient(180deg, rgba(34, 56, 62, 0.78) 0%, rgba(33, 29, 26, 0.90) 100%),
+      url("../assets/susquehanna-golden-hour.png");
+  }
 }
 
 /* --- Torn/deckled edge between sections ---------------------------------- */
