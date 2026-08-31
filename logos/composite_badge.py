@@ -215,6 +215,12 @@ def main() -> None:
         tracking=0.05,
     )
     # Bottom ribbon ~ center (512.9, 162.6) r=748.8
+    # KNOWN ISSUE: this arc over-curves relative to the ribbon art. Text rises ~71px
+    # from center to end while the ribbon midline only rises ~42px, so the outer
+    # letters ride up out of the rust band. The ribbon is hand-drawn and shallower
+    # than a true circle, so fixing it means measuring the rust midline per column
+    # off badge-frame.png and fitting a flatter arc (larger radius, wider phi span)
+    # rather than nudging these numbers by hand.
     draw_text_on_arc(
         text_layer,
         "CATFISH CLASSIC",
@@ -238,16 +244,25 @@ def main() -> None:
     loc = "LONG LEVEL, PA"
     loc_layer = Image.new("RGBA", badge.size, (0, 0, 0, 0))
     glyphs = [render_glyph(ch, font_loc, SLATE, 0.92, pad=1) for ch in loc]
+    # render_glyph crops to each glyph's ink box, which throws away the baseline.
+    # Centering every glyph vertically would float the comma up to cap-height and
+    # make it read as an apostrophe, so re-apply each glyph's vertical bearing.
+    probe = ImageDraw.Draw(Image.new("RGBA", (1, 1), (0, 0, 0, 0)))
+    tops = [probe.textbbox((0, 0), ch, font=font_loc)[1] for ch in loc]
+    ink = [i for i, ch in enumerate(loc) if ch != " "]
+    base_top = min(tops[i] for i in ink)
+    offsets = [0 if loc[i] == " " else tops[i] - base_top for i in range(len(loc))]
     gap = 1
     total_w = sum(g.width for g in glyphs) + gap * (len(glyphs) - 1)
-    total_h = max(g.height for g in glyphs)
+    total_h = max(offsets[i] + glyphs[i].height for i in ink)
     tmp = Image.new("RGBA", (total_w, total_h), (0, 0, 0, 0))
     x = 0
-    for g in glyphs:
-        tmp.alpha_composite(g, (x, (total_h - g.height) // 2))
+    for g, dy in zip(glyphs, offsets):
+        tmp.alpha_composite(g, (x, dy))
         x += g.width + gap
     lx = int(round(cx - tmp.width / 2))
-    ly = H - tmp.height - 4
+    # Ribbon tails bottom out around y=910, so there is room to sit clear of the edge.
+    ly = H - tmp.height - 34
     loc_layer.alpha_composite(tmp, (lx, ly))
     loc_arr = np.array(loc_layer)
     rng = np.random.default_rng(11)

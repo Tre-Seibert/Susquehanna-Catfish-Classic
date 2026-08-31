@@ -20,7 +20,7 @@ Branding kit and website for an annual catfish tournament on the lower Susquehan
 | Website (3 pages, tested) | ✅ Done |
 | **Logo artwork** | ⏳ Illustration done (profile + hooked + badge frame). Lockups/type not set yet |
 | Registration backend / payment | ⏳ Not wired up |
-| Final rules (sections 3–6) | ⏳ Pending committee |
+| Final rules (sections 3–5) | ⏳ Pending committee — payouts now confirmed |
 
 ---
 
@@ -86,6 +86,27 @@ Not a name collision, but Long Level isn't open territory. Worth a conversation 
 **Verified facts** (not assumed):
 - Lake Clarke Marina — 1552 Long Level Rd, Wrightsville, PA 17368 · (717) 252-2881
 - Last Fri/Sat of August: **2027 = Aug 27–28**, 2028 = Aug 25–26, 2029 = Aug 24–25
+
+## Confirmed tournament details (from flyer)
+
+| Item | Value |
+|---|---|
+| Entry | $125 per boat, max 4-person crew |
+| Check-in | **Friday 5:00 PM**, Lake Clarke Marina |
+| Fishing | Lines in after check-in, fish overnight through Saturday |
+| Weigh-in | Scales open **4:00 PM** Saturday, **close 7:00 PM sharp** |
+| Registration deadline | 48 hours before check-in → **Wed Aug 25, 5:00 PM** for 2027 |
+| 1st place | $1,000 — heaviest catfish |
+| 2nd place | $250 |
+| 3rd place | $125 |
+| Kids bracket | $125 prize, 16 & under (kids fish free on a registered boat) |
+| Extras | Live music, food truck, raffles & prizes, family-friendly |
+| Refunds | **None.** Non-refundable, non-transferable |
+
+Two things the flyer contradicted and were resolved with the client: the flyer's Friday
+5:00 PM check-in replaced an earlier "fishing opens Friday 6:00 AM" assumption (it's an
+overnight tournament — cats feed at night), and the Kids Bracket $125 is a **prize**, not
+a separate entry fee.
 
 ---
 

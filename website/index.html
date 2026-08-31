@@ -53,26 +53,28 @@ tailwind.config = {
         <span class="font-condensed text-lg sm:text-xl tracking-wide">Susquehanna Catfish Classic</span>
       </a>
 
-      <div class="hidden md:flex items-center gap-5 lg:gap-7 font-condensed text-base tracking-wide">
+      <div class="hidden lg:flex items-center gap-5 lg:gap-7 font-condensed text-base tracking-wide">
         <a href="index.html" class="hover:text-ochre transition-colors">Home</a>
         <a href="rules.html" class="hover:text-ochre transition-colors">About &amp; Rules</a>
         <a href="contact.html" class="hover:text-ochre transition-colors">Contact</a>
+        <a href="#payouts" class="hover:text-ochre transition-colors">Payouts</a>
         <a href="#sponsor" class="hover:text-ochre transition-colors">Sponsor</a>
         <a href="#register" class="btn btn-primary px-4 py-1.5 text-sm">Register</a>
       </div>
 
-      <button id="menu-btn" class="md:hidden p-2 -mr-2" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+      <button id="menu-btn" class="lg:hidden p-2 -mr-2" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
     </div>
 
-    <div id="mobile-menu" class="md:hidden">
+    <div id="mobile-menu" class="lg:hidden">
       <div class="flex flex-col gap-1 pb-4 font-condensed text-lg">
         <a href="index.html" class="py-2 hover:text-ochre">Home</a>
         <a href="rules.html" class="py-2 hover:text-ochre">About &amp; Rules</a>
         <a href="contact.html" class="py-2 hover:text-ochre">Contact</a>
+        <a href="#payouts" class="py-2 hover:text-ochre">Payouts</a>
         <a href="#sponsor" class="py-2 hover:text-ochre">Sponsor</a>
         <a href="#register" class="btn btn-primary px-4 py-2 mt-2 text-center">Register</a>
       </div>
@@ -101,8 +103,9 @@ tailwind.config = {
     </div>
 
     <p class="max-w-xl mx-auto text-base sm:text-lg opacity-90 mb-10">
-      Two days on the lower Susquehanna chasing flatheads and channel cats.
-      $125 a boat, four anglers max, biggest fish on the scale takes it.
+      Check in Friday evening, fish the river through the night, and put your best
+      cat on the scale Saturday at four. $125 a boat, four anglers max —
+      <strong class="text-ochre">$1,000 to the heaviest fish.</strong>
     </p>
 
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -120,27 +123,27 @@ tailwind.config = {
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
 
       <div class="card p-5 sm:p-6 text-center">
-        <p class="label text-rust mb-2">Dates</p>
-        <p class="font-condensed text-2xl sm:text-3xl leading-tight">Aug 27–28</p>
-        <p class="text-sm mt-1 opacity-75">Last Fri &amp; Sat of August, every year</p>
+        <p class="label text-rust mb-2">Top Prize</p>
+        <p class="font-condensed text-2xl sm:text-3xl leading-tight">$1,000</p>
+        <p class="text-sm mt-1 opacity-75">Heaviest catfish</p>
       </div>
 
       <div class="card p-5 sm:p-6 text-center">
         <p class="label text-rust mb-2">Entry Fee</p>
         <p class="font-condensed text-2xl sm:text-3xl leading-tight">$125</p>
-        <p class="text-sm mt-1 opacity-75">Per boat</p>
+        <p class="text-sm mt-1 opacity-75">Per boat · 4 anglers max</p>
       </div>
 
       <div class="card p-5 sm:p-6 text-center">
-        <p class="label text-rust mb-2">Crew Limit</p>
-        <p class="font-condensed text-2xl sm:text-3xl leading-tight">4 Anglers</p>
-        <p class="text-sm mt-1 opacity-75">Maximum per boat</p>
+        <p class="label text-rust mb-2">Check-In</p>
+        <p class="font-condensed text-2xl sm:text-3xl leading-tight">Fri 5:00 PM</p>
+        <p class="text-sm mt-1 opacity-75">Aug 27 · Lake Clarke Marina</p>
       </div>
 
       <div class="card p-5 sm:p-6 text-center">
         <p class="label text-rust mb-2">Weigh-In</p>
-        <p class="font-condensed text-2xl sm:text-3xl leading-tight">4:00 PM</p>
-        <p class="text-sm mt-1 opacity-75">Saturday · Lake Clarke Marina</p>
+        <p class="font-condensed text-2xl sm:text-3xl leading-tight">Sat 4–7 PM</p>
+        <p class="text-sm mt-1 opacity-75">Scales close 7:00 sharp</p>
       </div>
 
     </div>
@@ -151,11 +154,12 @@ tailwind.config = {
 <section class="paper bg-oat-deep py-14 sm:py-20" style="background-color:#E2D6BC" aria-labelledby="about-heading">
   <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
     <p class="label text-moss mb-3">The Tournament</p>
-    <h2 id="about-heading" class="font-display text-3xl sm:text-4xl mb-6">Two Days. One River. Big Cats.</h2>
+    <h2 id="about-heading" class="font-display text-3xl sm:text-4xl mb-6">One Night. One River. Big Cats.</h2>
     <p class="text-lg leading-relaxed mb-5">
       The Susquehanna Catfish Classic runs out of Lake Clarke Marina on the last Friday and
-      Saturday of August — every year, rain or shine. Lines hit the water Friday morning and
-      the scales open at 4:00 PM Saturday, same marina.
+      Saturday of August — every year, rain or shine. Check-in is 5:00 PM Friday, lines go in
+      after that, and you fish straight through the night. Scales open at 4:00 PM Saturday
+      and close at 7:00.
     </p>
     <p class="text-lg leading-relaxed mb-8">
       It's open to anybody with a boat and a license. Bring a crew of up to four, fish the
@@ -166,6 +170,85 @@ tailwind.config = {
   </div>
 </section>
 
+<!-- ============================ PAYOUTS ============================ -->
+<section id="payouts" class="halftone relative bg-slate text-oat py-16 sm:py-24" aria-labelledby="payouts-heading">
+  <div class="relative max-w-4xl mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-12">
+      <p class="label text-ochre mb-3">Prize Money</p>
+      <h2 id="payouts-heading" class="font-display text-3xl sm:text-5xl mb-4">Tournament Payouts</h2>
+      <p class="opacity-90 max-w-lg mx-auto">
+        Heaviest catfish takes the top spot. Weighed at the scale, Saturday afternoon.
+      </p>
+    </div>
+
+    <!-- First place -->
+    <div class="card bg-oat text-ink p-8 text-center mb-6">
+      <p class="label text-rust mb-2">1st Place — Heaviest Catfish</p>
+      <p class="font-display text-5xl sm:text-7xl text-rust leading-none mb-2">$1,000</p>
+      <p class="font-script text-ochre text-2xl">Who's taking it home?</p>
+    </div>
+
+    <!-- Second, third, kids -->
+    <div class="grid sm:grid-cols-3 gap-4 sm:gap-6">
+      <div class="card bg-oat text-ink p-5 text-center">
+        <p class="label text-rust mb-2">2nd Place</p>
+        <p class="font-condensed text-3xl leading-none mb-1">$250</p>
+        <p class="text-sm opacity-75">Heaviest catfish</p>
+      </div>
+      <div class="card bg-oat text-ink p-5 text-center">
+        <p class="label text-rust mb-2">3rd Place</p>
+        <p class="font-condensed text-3xl leading-none mb-1">$125</p>
+        <p class="text-sm opacity-75">Heaviest catfish</p>
+      </div>
+      <div class="card bg-oat text-ink p-5 text-center">
+        <p class="label text-rust mb-2">Kids Bracket</p>
+        <p class="font-condensed text-3xl leading-none mb-1">$125</p>
+        <p class="text-sm opacity-75">16 &amp; under</p>
+      </div>
+    </div>
+
+    <p class="text-center text-sm opacity-75 mt-8 max-w-xl mx-auto">
+      Kids 16 and under fish free on a registered boat and compete in their own bracket.
+      Get them on the water — let's see who lands the biggest cat.
+    </p>
+  </div>
+</section>
+
+<!-- ============================ MORE THAN A TOURNAMENT ============================ -->
+<section class="paper bg-oat py-16 sm:py-24" aria-labelledby="extras-heading">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-12">
+      <p class="label text-moss mb-3">On the Bank</p>
+      <h2 id="extras-heading" class="font-display text-3xl sm:text-5xl mb-4">More Than Just a Tournament</h2>
+      <p class="max-w-lg mx-auto opacity-80">
+        Come hang out before and after. Bring the family — you don't need a boat
+        to show up and eat.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+      <div class="card p-5 text-center">
+        <p class="font-condensed text-xl mb-1">Live Music</p>
+        <p class="text-sm opacity-75">Friday evening at the marina</p>
+      </div>
+      <div class="card p-5 text-center">
+        <p class="font-condensed text-xl mb-1">Food Truck</p>
+        <p class="text-sm opacity-75">On site both days</p>
+      </div>
+      <div class="card p-5 text-center">
+        <p class="font-condensed text-xl mb-1">Raffles &amp; Prizes</p>
+        <p class="text-sm opacity-75">Drawn at the weigh-in</p>
+      </div>
+      <div class="card p-5 text-center">
+        <p class="font-condensed text-xl mb-1">Family Friendly</p>
+        <p class="text-sm opacity-75">Everybody's welcome</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============================ REGISTRATION ============================ -->
 <section id="register" class="halftone relative bg-slate text-oat py-16 sm:py-24" aria-labelledby="register-heading">
   <div class="relative max-w-2xl mx-auto px-4 sm:px-6">
@@ -173,7 +256,11 @@ tailwind.config = {
     <div class="text-center mb-10">
       <p class="label text-ochre mb-3">Entry</p>
       <h2 id="register-heading" class="font-display text-3xl sm:text-5xl mb-4">Register Your Boat</h2>
-      <p class="opacity-90">$125 per boat · Maximum 4 anglers · Entries close August 20, 2027</p>
+      <p class="opacity-90">$125 per boat · Maximum 4 anglers</p>
+      <p class="opacity-90 mt-1">
+        Registration closes <strong class="text-ochre">Wednesday, August 25 at 5:00 PM</strong>
+        — 48 hours before Friday's check-in.
+      </p>
     </div>
 
     <form id="registration-form" class="card p-6 sm:p-8 text-ink space-y-5" novalidate>
@@ -220,6 +307,15 @@ tailwind.config = {
         <p class="opacity-80">
           Online payment isn't live yet. Submit this form to reserve your spot and we'll follow
           up with payment instructions. <span class="opacity-70">(Stripe / PayPal to be connected before entries open.)</span>
+        </p>
+      </div>
+
+      <div class="border-2 border-rust bg-rust/10 p-4 text-sm">
+        <p class="font-semibold mb-1 text-rust">No refunds, no cancellations</p>
+        <p class="opacity-85">
+          Once your registration is submitted, your entry fee is
+          <strong>non-refundable and non-transferable</strong>. The tournament runs rain
+          or shine. Make sure your crew is set before you enter.
         </p>
       </div>
 
@@ -395,7 +491,7 @@ tailwind.config = {
         <p class="font-condensed text-lg leading-snug">Lake Clarke Marina</p>
         <address class="not-italic text-sm opacity-80 mt-1 leading-relaxed">
           1552 Long Level Rd<br>Wrightsville, PA 17368<br>
-          Scales open 4:00 PM Saturday
+          Scales 4:00–7:00 PM Saturday
         </address>
       </div>
 

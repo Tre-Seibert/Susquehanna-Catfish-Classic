@@ -36,24 +36,26 @@ tailwind.config = {
         <img src="assets/icon-mark.png" alt="" class="h-10 w-auto" width="96" height="42">
         <span class="font-condensed text-lg sm:text-xl tracking-wide">Susquehanna Catfish Classic</span>
       </a>
-      <div class="hidden md:flex items-center gap-5 lg:gap-7 font-condensed text-base tracking-wide">
+      <div class="hidden lg:flex items-center gap-5 lg:gap-7 font-condensed text-base tracking-wide">
         <a href="index.html" class="hover:text-ochre transition-colors">Home</a>
         <a href="rules.html" class="text-ochre">About &amp; Rules</a>
         <a href="contact.html" class="hover:text-ochre transition-colors">Contact</a>
+        <a href="index.html#payouts" class="hover:text-ochre transition-colors">Payouts</a>
         <a href="index.html#sponsor" class="hover:text-ochre transition-colors">Sponsor</a>
         <a href="index.html#register" class="btn btn-primary px-4 py-1.5 text-sm">Register</a>
       </div>
-      <button id="menu-btn" class="md:hidden p-2 -mr-2" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+      <button id="menu-btn" class="lg:hidden p-2 -mr-2" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
     </div>
-    <div id="mobile-menu" class="md:hidden">
+    <div id="mobile-menu" class="lg:hidden">
       <div class="flex flex-col gap-1 pb-4 font-condensed text-lg">
         <a href="index.html" class="py-2 hover:text-ochre">Home</a>
         <a href="rules.html" class="py-2 text-ochre">About &amp; Rules</a>
         <a href="contact.html" class="py-2 hover:text-ochre">Contact</a>
+        <a href="index.html#payouts" class="py-2 hover:text-ochre">Payouts</a>
         <a href="index.html#sponsor" class="py-2 hover:text-ochre">Sponsor</a>
         <a href="index.html#register" class="btn btn-primary px-4 py-2 mt-2 text-center">Register</a>
       </div>
@@ -88,9 +90,15 @@ tailwind.config = {
         Pennsylvania. It runs the <strong>last Friday and Saturday of August</strong>, every year.
       </p>
       <p>
-        The format is simple on purpose. Pay your entry, launch when you want, fish the water
-        you know, and bring your best fish to the scale by 4:00 PM Saturday. No qualifiers,
-        no membership dues, no series points to chase. Show up and fish.
+        The format is simple on purpose. Check in Friday at 5:00 PM, fish the water you know
+        through the night, and get your best fish to the scale Saturday afternoon before
+        7:00 PM. No qualifiers, no membership dues, no series points to chase.
+        Show up and fish.
+      </p>
+      <p>
+        <strong>$1,000 goes to the heaviest catfish</strong>, with payouts down to third and a
+        separate bracket for anglers 16 and under. Friday evening there's live music, a food
+        truck, and raffles on the bank — you don't need a boat to come out.
       </p>
       <p>
         Flatheads and channel cats both run this stretch of river in late August, and the
@@ -112,10 +120,11 @@ tailwind.config = {
     </div>
 
     <div class="card border-2 border-dashed border-rust/60 bg-rust/5 p-5 mb-8 text-sm">
-      <p class="font-semibold mb-1">⚠️ Draft — pending committee approval</p>
+      <p class="font-semibold mb-1">⚠️ Sections 3, 4 and 5 still pending</p>
       <p class="opacity-80">
-        The sections below are placeholders reflecting the confirmed details. Final rules need
-        sign-off from the tournament committee and Lake Clarke Marina before entries open.
+        Entry, hours and payouts are confirmed. <strong>Boundaries, legal fish &amp; tackle,
+        and the weigh-in procedure</strong> are still placeholders and need sign-off from the
+        tournament committee and Lake Clarke Marina before entries open.
       </p>
     </div>
 
@@ -124,21 +133,29 @@ tailwind.config = {
       <details class="card p-5" open>
         <summary class="font-condensed text-xl cursor-pointer">1. Entry &amp; Eligibility</summary>
         <ul class="mt-4 space-y-2 text-base leading-relaxed list-disc pl-5">
-          <li>Entry fee is <strong>$125 per boat</strong>, covering the full two days.</li>
+          <li>Entry fee is <strong>$125 per boat</strong>, covering the whole tournament.</li>
           <li><strong>Maximum four (4) anglers per boat.</strong> No substitutions after check-in.</li>
           <li>Every angler must hold a valid Pennsylvania fishing license where required by law.</li>
-          <li>Anglers under 16 fish free but must be counted toward the four-angler limit.</li>
-          <li>Entries close <strong>August 20</strong> or when the field fills, whichever comes first.</li>
+          <li>Anglers <strong>16 and under fish free</strong> but must be counted toward the
+              four-angler limit. They compete in their own Kids Bracket.</li>
+          <li>Registration must be completed <strong>no later than 48 hours before check-in</strong>
+              — for 2027 that's <strong>Wednesday, August 25 at 5:00 PM</strong> — or when the
+              field fills, whichever comes first.</li>
+          <li><strong>No returns or cancellations.</strong> Once submitted, your entry fee is
+              non-refundable and non-transferable.</li>
         </ul>
       </details>
 
       <details class="card p-5">
         <summary class="font-condensed text-xl cursor-pointer">2. Tournament Hours</summary>
         <ul class="mt-4 space-y-2 text-base leading-relaxed list-disc pl-5">
-          <li>Fishing opens <strong>Friday at 6:00 AM</strong>.</li>
-          <li>Lines must be out of the water by <strong>3:00 PM Saturday</strong>.</li>
-          <li><strong>Scales open 4:00 PM Saturday</strong> at Lake Clarke Marina and close at 6:00 PM sharp.</li>
-          <li>Boats arriving after the scales close will not be weighed. No exceptions.</li>
+          <li><strong>Check-in is Friday, August 27 at 5:00 PM</strong> at Lake Clarke Marina.
+              All boats must check in before fishing.</li>
+          <li>Lines go in after check-in — you fish straight through the night.</li>
+          <li><strong>Scales open 4:00 PM Saturday</strong> at Lake Clarke Marina and
+              <strong>close at 7:00 PM sharp</strong>.</li>
+          <li>Your fish must be at the scale before 7:00 PM. Boats arriving after the scales
+              close will not be weighed. No exceptions.</li>
         </ul>
       </details>
 
@@ -170,10 +187,15 @@ tailwind.config = {
 
       <details class="card p-5">
         <summary class="font-condensed text-xl cursor-pointer">6. Payouts &amp; Awards</summary>
-        <p class="mt-4 text-base leading-relaxed opacity-70 italic">
-          Placeholder — prize structure, payback percentage, number of places paid, and big-fish
-          pot. Committee to confirm.
-        </p>
+        <ul class="mt-4 space-y-2 text-base leading-relaxed list-disc pl-5">
+          <li><strong>1st Place — Heaviest Catfish: $1,000</strong></li>
+          <li>2nd Place — Heaviest Catfish: $250</li>
+          <li>3rd Place — Heaviest Catfish: $125</li>
+          <li>Kids Bracket (16 &amp; under): $125</li>
+          <li>Placings are decided by the single heaviest catfish weighed per boat.</li>
+          <li>Raffle prizes are drawn separately at the weigh-in and are not part of the
+              tournament payout.</li>
+        </ul>
       </details>
 
       <details class="card p-5">
@@ -208,8 +230,8 @@ tailwind.config = {
           marina on Long Level Road, Wrightsville. Host and weigh-in are both here.
         </p>
         <p>
-          Launch Friday morning, fish the pool, and bring your best fish back to the same
-          dock. Scales open 4:00 PM Saturday.
+          Check in Friday evening, fish the pool overnight, and bring your best fish back to
+          the same dock. Scales run 4:00–7:00 PM Saturday.
         </p>
         <div class="pt-2">
           <p class="font-condensed text-xl">1552 Long Level Rd</p>
@@ -223,9 +245,11 @@ tailwind.config = {
       <div class="card bg-oat/10 border-oat/30 p-6 text-center">
         <p class="label text-ochre mb-4">At a glance</p>
         <dl class="space-y-3">
+          <div><dt class="text-sm opacity-70">Top prize</dt><dd class="font-condensed text-2xl text-ochre">$1,000</dd></div>
           <div><dt class="text-sm opacity-70">Entry</dt><dd class="font-condensed text-2xl">$125 / boat</dd></div>
           <div><dt class="text-sm opacity-70">Crew limit</dt><dd class="font-condensed text-2xl">4 anglers</dd></div>
-          <div><dt class="text-sm opacity-70">Weigh-in</dt><dd class="font-condensed text-2xl">Sat 4:00 PM</dd></div>
+          <div><dt class="text-sm opacity-70">Check-in</dt><dd class="font-condensed text-2xl">Fri 5:00 PM</dd></div>
+          <div><dt class="text-sm opacity-70">Weigh-in</dt><dd class="font-condensed text-2xl">Sat 4–7 PM</dd></div>
           <div><dt class="text-sm opacity-70">2027 dates</dt><dd class="font-condensed text-2xl">Aug 27–28</dd></div>
         </dl>
         <a href="index.html#register" class="btn btn-primary w-full mt-6 py-3">Register Now</a>
@@ -257,7 +281,7 @@ tailwind.config = {
         <p class="font-condensed text-lg leading-snug">Lake Clarke Marina</p>
         <address class="not-italic text-sm opacity-80 mt-1 leading-relaxed">
           1552 Long Level Rd<br>Wrightsville, PA 17368<br>
-          Scales open 4:00 PM Saturday
+          Scales 4:00–7:00 PM Saturday
         </address>
       </div>
     </div>
