@@ -15,7 +15,7 @@ document.querySelectorAll('[data-year]').forEach(el => {
   el.textContent = new Date().getFullYear();
 });
 
-// Registration form — show First/Last name fields for as many anglers as selected
+// Registration form — show a name field for as many anglers as selected
 const anglerCountSelect = document.getElementById('anglerCount');
 const anglerBlocks = document.querySelectorAll('.angler-block');
 if (anglerCountSelect && anglerBlocks.length) {
@@ -48,7 +48,7 @@ if (regForm) {
     const successBox = document.getElementById('registration-success');
     const summary = document.getElementById('registration-summary');
     if (summary) {
-      summary.textContent = `${data.boatName} — Captain ${data.angler1First} ${data.angler1Last}, ${data.anglerCount} angler(s)`;
+      summary.textContent = `${data.boatName} — Captain ${data.angler1Name}, ${data.anglerCount} angler(s)`;
     }
     regForm.classList.add('hidden');
     if (successBox) successBox.classList.remove('hidden');

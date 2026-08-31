@@ -38,7 +38,7 @@ tailwind.config = {
   },
 };
 </script>
-<link rel="stylesheet" href="css/styles.css?v=20260831b">
+<link rel="stylesheet" href="css/styles.css?v=20260831c">
 </head>
 
 <body class="bg-oat text-ink">
@@ -306,68 +306,32 @@ tailwind.config = {
       <div>
         <label for="anglerCount" class="label block mb-1.5">Number of Anglers <span class="text-rust">*</span></label>
         <select id="anglerCount" name="anglerCount" class="field" required>
-          <option value="1">1 angler</option>
+          <option value="1" selected>1 angler</option>
           <option value="2">2 anglers</option>
           <option value="3">3 anglers</option>
-          <option value="4" selected>4 anglers (max)</option>
+          <option value="4">4 anglers (max)</option>
         </select>
       </div>
 
       <div id="angler-fields" class="space-y-5">
         <div class="angler-block" data-angler-index="1">
-          <p class="label text-rust mb-2">Angler 1 <span class="opacity-70 font-normal normal-case tracking-normal">— Captain</span></p>
-          <div class="grid sm:grid-cols-2 gap-5">
-            <div>
-              <label for="angler1First" class="label block mb-1.5">First Name <span class="text-rust">*</span></label>
-              <input type="text" id="angler1First" name="angler1First" class="field" required placeholder="First name">
-            </div>
-            <div>
-              <label for="angler1Last" class="label block mb-1.5">Last Name <span class="text-rust">*</span></label>
-              <input type="text" id="angler1Last" name="angler1Last" class="field" required placeholder="Last name">
-            </div>
-          </div>
+          <label for="angler1Name" class="label block mb-1.5">Angler 1 <span class="opacity-70 font-normal normal-case tracking-normal">— Captain</span> <span class="text-rust">*</span></label>
+          <input type="text" id="angler1Name" name="angler1Name" class="field" required placeholder="Full name">
         </div>
 
         <div class="angler-block" data-angler-index="2">
-          <p class="label text-rust mb-2">Angler 2</p>
-          <div class="grid sm:grid-cols-2 gap-5">
-            <div>
-              <label for="angler2First" class="label block mb-1.5">First Name <span class="text-rust">*</span></label>
-              <input type="text" id="angler2First" name="angler2First" class="field" placeholder="First name">
-            </div>
-            <div>
-              <label for="angler2Last" class="label block mb-1.5">Last Name <span class="text-rust">*</span></label>
-              <input type="text" id="angler2Last" name="angler2Last" class="field" placeholder="Last name">
-            </div>
-          </div>
+          <label for="angler2Name" class="label block mb-1.5">Angler 2 <span class="text-rust">*</span></label>
+          <input type="text" id="angler2Name" name="angler2Name" class="field" placeholder="Full name">
         </div>
 
         <div class="angler-block" data-angler-index="3">
-          <p class="label text-rust mb-2">Angler 3</p>
-          <div class="grid sm:grid-cols-2 gap-5">
-            <div>
-              <label for="angler3First" class="label block mb-1.5">First Name <span class="text-rust">*</span></label>
-              <input type="text" id="angler3First" name="angler3First" class="field" placeholder="First name">
-            </div>
-            <div>
-              <label for="angler3Last" class="label block mb-1.5">Last Name <span class="text-rust">*</span></label>
-              <input type="text" id="angler3Last" name="angler3Last" class="field" placeholder="Last name">
-            </div>
-          </div>
+          <label for="angler3Name" class="label block mb-1.5">Angler 3 <span class="text-rust">*</span></label>
+          <input type="text" id="angler3Name" name="angler3Name" class="field" placeholder="Full name">
         </div>
 
         <div class="angler-block" data-angler-index="4">
-          <p class="label text-rust mb-2">Angler 4</p>
-          <div class="grid sm:grid-cols-2 gap-5">
-            <div>
-              <label for="angler4First" class="label block mb-1.5">First Name <span class="text-rust">*</span></label>
-              <input type="text" id="angler4First" name="angler4First" class="field" placeholder="First name">
-            </div>
-            <div>
-              <label for="angler4Last" class="label block mb-1.5">Last Name <span class="text-rust">*</span></label>
-              <input type="text" id="angler4Last" name="angler4Last" class="field" placeholder="Last name">
-            </div>
-          </div>
+          <label for="angler4Name" class="label block mb-1.5">Angler 4 <span class="text-rust">*</span></label>
+          <input type="text" id="angler4Name" name="angler4Name" class="field" placeholder="Full name">
         </div>
       </div>
 
@@ -588,6 +552,6 @@ tailwind.config = {
   </div>
 </footer>
 
-<script src="js/main.js?v=20260831b"></script>
+<script src="js/main.js?v=20260831c"></script>
 </body>
 </html>
