@@ -15,6 +15,26 @@ document.querySelectorAll('[data-year]').forEach(el => {
   el.textContent = new Date().getFullYear();
 });
 
+// Registration form — show First/Last name fields for as many anglers as selected
+const anglerCountSelect = document.getElementById('anglerCount');
+const anglerBlocks = document.querySelectorAll('.angler-block');
+if (anglerCountSelect && anglerBlocks.length) {
+  const updateAnglerFields = () => {
+    const count = parseInt(anglerCountSelect.value, 10) || 1;
+    anglerBlocks.forEach((block) => {
+      const index = parseInt(block.dataset.anglerIndex, 10);
+      const active = index <= count;
+      block.classList.toggle('hidden', !active);
+      block.querySelectorAll('input').forEach((input) => {
+        input.disabled = !active;
+        input.required = active;
+      });
+    });
+  };
+  anglerCountSelect.addEventListener('change', updateAnglerFields);
+  updateAnglerFields();
+}
+
 // Registration form (placeholder — no backend wired up yet)
 const regForm = document.getElementById('registration-form');
 if (regForm) {
@@ -28,7 +48,7 @@ if (regForm) {
     const successBox = document.getElementById('registration-success');
     const summary = document.getElementById('registration-summary');
     if (summary) {
-      summary.textContent = `${data.boatName} — Captain ${data.captainName}, ${data.anglerCount} angler(s)`;
+      summary.textContent = `${data.boatName} — Captain ${data.angler1First} ${data.angler1Last}, ${data.anglerCount} angler(s)`;
     }
     regForm.classList.add('hidden');
     if (successBox) successBox.classList.remove('hidden');
