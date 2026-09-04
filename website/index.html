@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Susquehanna Catfish Classic — Aug 27–28, 2027 | Lake Clarke Marina</title>
 <meta name="robots" content="noindex, nofollow, noarchive">
-<meta name="description" content="The Susquehanna Catfish Classic. Annual catfish tournament on the Susquehanna River, hosted at Lake Clarke Marina. $125 per boat, 4 anglers max. Weigh-in 4PM Saturday at Lake Clarke Marina.">
+<meta name="description" content="The Susquehanna Catfish Classic. Annual catfish tournament on the Susquehanna River, hosted at Lake Clarke Marina. $200 per boat, 4 anglers max. Weigh-in 4PM Saturday at Lake Clarke Marina.">
 
 <meta property="og:title" content="Susquehanna Catfish Classic">
 <meta property="og:description" content="Where Giants Run the River. August 27–28, 2027 — Lake Clarke Marina, Susquehanna River, PA.">
@@ -58,8 +58,6 @@ tailwind.config = {
         <a href="index.html" class="hover:text-ochre transition-colors">Home</a>
         <a href="rules.html" class="hover:text-ochre transition-colors">About &amp; Rules</a>
         <a href="contact.html" class="hover:text-ochre transition-colors">Contact</a>
-        <a href="#payouts" class="hover:text-ochre transition-colors">Payouts</a>
-        <a href="#sponsor" class="hover:text-ochre transition-colors">Sponsor</a>
         <a href="#register" class="btn btn-primary px-4 py-1.5 text-sm">Register</a>
       </div>
 
@@ -75,8 +73,6 @@ tailwind.config = {
         <a href="index.html" class="py-2 hover:text-ochre">Home</a>
         <a href="rules.html" class="py-2 hover:text-ochre">About &amp; Rules</a>
         <a href="contact.html" class="py-2 hover:text-ochre">Contact</a>
-        <a href="#payouts" class="py-2 hover:text-ochre">Payouts</a>
-        <a href="#sponsor" class="py-2 hover:text-ochre">Sponsor</a>
         <a href="#register" class="btn btn-primary px-4 py-2 mt-2 text-center">Register</a>
       </div>
     </div>
@@ -105,7 +101,7 @@ tailwind.config = {
 
     <p class="max-w-xl mx-auto text-base sm:text-lg opacity-90 mb-10">
       Check in Friday evening, fish the river through the night, and put your best
-      cat on the scale Saturday at four. $125 a boat, four anglers max —
+      cat on the scale Saturday at four. $200 a boat, four anglers max —
       <strong class="text-ochre">$1,000 to the heaviest fish.</strong>
     </p>
 
@@ -163,7 +159,7 @@ tailwind.config = {
 
       <div class="card p-5 sm:p-6 text-center">
         <p class="label text-rust mb-2">Entry Fee</p>
-        <p class="font-condensed text-2xl sm:text-3xl leading-tight">$125</p>
+        <p class="font-condensed text-2xl sm:text-3xl leading-tight">$200</p>
         <p class="text-sm mt-1 opacity-75">Per boat · 4 anglers max</p>
       </div>
 
@@ -289,7 +285,7 @@ tailwind.config = {
     <div class="text-center mb-10">
       <p class="label text-ochre mb-3">Entry</p>
       <h2 id="register-heading" class="font-display text-3xl sm:text-5xl mb-4">Register Your Boat</h2>
-      <p class="opacity-90">$125 per boat · Maximum 4 anglers</p>
+      <p class="opacity-90">$200 per boat · Maximum 4 anglers</p>
       <p class="opacity-90 mt-1">
         Registration closes <strong class="text-ochre">Wednesday, August 25 at 5:00 PM</strong>
         — 48 hours before Friday's check-in.
@@ -301,6 +297,11 @@ tailwind.config = {
       <div>
         <label for="boatName" class="label block mb-1.5">Boat Name <span class="text-rust">*</span></label>
         <input type="text" id="boatName" name="boatName" class="field" required placeholder="Miss Susquehanna">
+      </div>
+
+      <div>
+        <label for="boatRegNumber" class="label block mb-1.5">Boat Registration Number <span class="text-rust">*</span></label>
+        <input type="text" id="boatRegNumber" name="boatRegNumber" class="field" required placeholder="PA 1234 AB" autocomplete="off">
       </div>
 
       <div>
@@ -392,50 +393,25 @@ tailwind.config = {
     <div class="text-center mb-12">
       <p class="label text-rust mb-3">Merchandise</p>
       <h2 id="merch-heading" class="font-display text-3xl sm:text-5xl mb-4">Tournament Gear</h2>
-      <p class="max-w-lg mx-auto opacity-80">
-        Printed locally on soft heather blanks. Wear it on the water or keep it clean —
-        we're not going to tell you what to do.
-      </p>
     </div>
 
     <div class="grid sm:grid-cols-2 gap-6 sm:gap-8">
 
       <article class="card p-6 flex flex-col">
         <div class="aspect-[4/3] grid place-content-center mb-5 px-6 bg-[#E2D6BC]">
-          <img src="assets/merch-tshirt.png" alt="Vintage hooked catfish illustration for the tournament tee back print" class="max-h-44 sm:max-h-52 w-auto mx-auto">
+          <img src="assets/merch-tshirt.png" alt="" class="max-h-44 sm:max-h-52 w-auto mx-auto opacity-60">
         </div>
-        <h3 class="font-condensed text-2xl mb-1">Tournament Tee</h3>
-        <p class="text-sm opacity-75 mb-4 flex-1">
-          Heather oatmeal. Badge on the left chest, full mark on the back with the year.
-          Three-color soft-hand print. Sponsor logos print across the back —
-          <a href="#sponsor" class="underline hover:text-rust">get on the shirt by July 1</a>.
-        </p>
-        <div class="flex items-center justify-between gap-4">
-          <span class="font-condensed text-2xl">$25</span>
-          <button type="button" data-merch-cta class="btn btn-primary px-5 py-2.5 text-sm">Notify Me</button>
-        </div>
+        <p class="font-condensed text-2xl text-center">Coming Soon</p>
       </article>
 
       <article class="card p-6 flex flex-col">
         <div class="aspect-[4/3] grid place-content-center mb-5 px-6 bg-[#E2D6BC]">
-          <img src="assets/merch-hat.png" alt="Catfish mark for hat embroidery" class="max-h-44 sm:max-h-52 w-auto mx-auto">
+          <img src="assets/merch-hat.png" alt="" class="max-h-44 sm:max-h-52 w-auto mx-auto opacity-60">
         </div>
-        <h3 class="font-condensed text-2xl mb-1">Classic Hat</h3>
-        <p class="text-sm opacity-75 mb-4 flex-1">
-          Structured six-panel, slate crown and walnut brim. Single-color embroidered
-          catfish on the front.
-        </p>
-        <div class="flex items-center justify-between gap-4">
-          <span class="font-condensed text-2xl">$28</span>
-          <button type="button" data-merch-cta class="btn btn-primary px-5 py-2.5 text-sm">Notify Me</button>
-        </div>
+        <p class="font-condensed text-2xl text-center">Coming Soon</p>
       </article>
 
     </div>
-
-    <p class="text-center text-sm opacity-65 mt-8">
-      Store opens closer to the tournament. Hoodies and stickers to follow.
-    </p>
   </div>
 </section>
 
@@ -542,7 +518,6 @@ tailwind.config = {
       <nav class="flex gap-5">
         <a href="rules.html" class="hover:text-ochre">Rules</a>
         <a href="contact.html" class="hover:text-ochre">Contact</a>
-        <a href="#sponsor" class="hover:text-ochre">Sponsor</a>
         <a href="#register" class="hover:text-ochre">Register</a>
       </nav>
     </div>
@@ -552,6 +527,6 @@ tailwind.config = {
   </div>
 </footer>
 
-<script src="js/main.js?v=20260831c"></script>
+<script src="js/main.js?v=20260904a"></script>
 </body>
 </html>
