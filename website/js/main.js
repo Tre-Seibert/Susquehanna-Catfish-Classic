@@ -48,7 +48,7 @@ if (regForm) {
     const successBox = document.getElementById('registration-success');
     const summary = document.getElementById('registration-summary');
     if (summary) {
-      summary.textContent = `${data.boatName} (${data.boatRegNumber}) — Captain ${data.angler1Name}, ${data.anglerCount} angler(s)`;
+      summary.textContent = `${data.boatName} (${data.boatRegNumber}) — Captain ${data.angler1Name}, fishing ${data.fishingLocation}`;
     }
     regForm.classList.add('hidden');
     if (successBox) successBox.classList.remove('hidden');
