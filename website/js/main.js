@@ -42,7 +42,7 @@ const registrationIsOpen = () => {
   return now >= REG_OPEN && now < REG_CLOSE;
 };
 
-// Registration form — closed until January 1, 2027
+// Registration form — closed until January 2027
 const regForm = document.getElementById('registration-form');
 const regClosed = document.getElementById('registration-closed');
 if (regForm) {
@@ -134,7 +134,7 @@ if (sponsorForm) {
     const diff = REG_CLOSE - new Date();
     const now = new Date();
     if (now < REG_OPEN) {
-      regNote.textContent = 'Registration opens January 1, 2027.';
+      regNote.textContent = 'Registration opens January 2027.';
       return;
     }
     if (diff <= 0) {
