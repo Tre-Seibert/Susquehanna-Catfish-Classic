@@ -80,8 +80,8 @@ if (sponsorForm) {
   const countdownEl = document.getElementById('countdown');
   if (!countdownEl) return;
 
-  const CHECK_IN = new Date('2027-08-27T17:00:00-04:00');
-  const REG_CLOSE = new Date('2027-08-25T17:00:00-04:00');
+  const CHECK_IN = new Date('2027-08-27T16:00:00-04:00');
+  const REG_CLOSE = new Date('2027-08-25T16:00:00-04:00');
 
   const digits = {
     days: countdownEl.querySelector('[data-unit="days"]'),
@@ -116,8 +116,8 @@ if (sponsorForm) {
     }
     const days = Math.ceil(diff / 86400000);
     regNote.textContent = days <= 1
-      ? 'Registration closes today at 5:00 PM.'
-      : `Registration closes in ${days} days — Wed, Aug 25 at 5:00 PM.`;
+      ? 'Registration closes today at 4:00 PM.'
+      : `Registration closes in ${days} days — Wed, Aug 25 at 4:00 PM.`;
   }
 
   let timer;
