@@ -35,11 +35,34 @@ if (anglerCountSelect && anglerBlocks.length) {
   updateAnglerFields();
 }
 
-// Registration form (placeholder — no backend wired up yet)
+const REG_OPEN = new Date('2027-01-01T00:00:00-05:00');
+const REG_CLOSE = new Date('2027-08-25T16:00:00-04:00');
+const registrationIsOpen = () => {
+  const now = new Date();
+  return now >= REG_OPEN && now < REG_CLOSE;
+};
+
+// Registration form — closed until January 1, 2027
 const regForm = document.getElementById('registration-form');
+const regClosed = document.getElementById('registration-closed');
 if (regForm) {
+  const setRegistrationAvailability = () => {
+    const open = registrationIsOpen();
+    regForm.hidden = !open;
+    regForm.classList.toggle('hidden', !open);
+    regForm.querySelectorAll('input, select, textarea, button').forEach((el) => {
+      el.disabled = !open;
+    });
+    if (regClosed) regClosed.classList.toggle('hidden', open);
+  };
+  setRegistrationAvailability();
+
   regForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    if (!registrationIsOpen()) {
+      setRegistrationAvailability();
+      return;
+    }
     if (!regForm.checkValidity()) {
       regForm.reportValidity();
       return;
@@ -81,7 +104,6 @@ if (sponsorForm) {
   if (!countdownEl) return;
 
   const CHECK_IN = new Date('2027-08-27T16:00:00-04:00');
-  const REG_CLOSE = new Date('2027-08-25T16:00:00-04:00');
 
   const digits = {
     days: countdownEl.querySelector('[data-unit="days"]'),
@@ -110,6 +132,11 @@ if (sponsorForm) {
   function updateRegNote() {
     if (!regNote) return;
     const diff = REG_CLOSE - new Date();
+    const now = new Date();
+    if (now < REG_OPEN) {
+      regNote.textContent = 'Registration opens January 1, 2027.';
+      return;
+    }
     if (diff <= 0) {
       regNote.textContent = 'Registration is closed.';
       return;

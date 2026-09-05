@@ -281,13 +281,22 @@ tailwind.config = {
       <p class="label text-ochre mb-3">Entry</p>
       <h2 id="register-heading" class="font-display text-3xl sm:text-5xl mb-4">Register Your Boat</h2>
       <p class="opacity-90">$200 per boat · Maximum 4 anglers</p>
-      <p class="opacity-90 mt-1">
-        Registration closes <strong class="text-ochre">Wednesday, August 25 at 4:00 PM</strong>
+      <p id="registration-window-note" class="opacity-90 mt-1">
+        Registration opens <strong class="text-ochre">January 1, 2027</strong>
+        and closes <strong class="text-ochre">Wednesday, August 25 at 4:00 PM</strong>
         — 48 hours before Friday's check-in.
       </p>
     </div>
 
-    <form id="registration-form" class="card p-6 sm:p-8 text-ink space-y-5" novalidate>
+    <div id="registration-closed" class="card p-8 text-ink text-center">
+      <p class="font-display text-2xl mb-3 text-rust">Registration opens January 1, 2027</p>
+      <p class="font-condensed text-lg mb-3">$200 per boat · Maximum 4 anglers</p>
+      <p class="opacity-80">
+        Entries aren't being taken yet. Check back on New Year's Day to register your boat.
+      </p>
+    </div>
+
+    <form id="registration-form" class="card p-6 sm:p-8 text-ink space-y-5 hidden" hidden novalidate>
 
       <div>
         <label for="boatName" class="label block mb-1.5">Boat Name <span class="text-rust">*</span></label>
@@ -527,6 +536,6 @@ tailwind.config = {
   </div>
 </footer>
 
-<script src="js/main.js?v=20260905a"></script>
+<script src="js/main.js?v=20260905b"></script>
 </body>
 </html>
